@@ -114,7 +114,7 @@ const SignUp = () => {
     data.append("email", email);
 
     try {
-      const response = await axios.post(`${Backendbaseurl}/api/personal-info`, data, {
+      const response = await axios.post(`${process.env.Backendbaseurl}/api/personal-info`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(response.data.message);

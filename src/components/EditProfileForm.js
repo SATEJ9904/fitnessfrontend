@@ -81,7 +81,7 @@ const EditProfileForm = ({ currentUser }) => {
     data.append("currentBMI", bmi);
 
     try {
-      const response = await axios.post(`${Backendbaseurl}/api/personal-info1`, data, {
+      const response = await axios.post(`${process.env.Backendbaseurl}/api/personal-info1`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(response.data.message);
