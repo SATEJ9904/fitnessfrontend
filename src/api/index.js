@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8080/api",
+  baseURL: `${Backendbaseurl}/api`,
 });
 
 export const UserSignUp = async (data) => API.post("/user/signup", data);

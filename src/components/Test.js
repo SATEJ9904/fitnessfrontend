@@ -166,7 +166,7 @@ const SelfInfo = () => {
 
   const handleSaveChanges = async () => {
     try {
-      await axios.post("http://127.0.0.1:8080/api/personal-info/email", formData);
+      await axios.post(`${Backendbaseurl}/api/personal-info/email`, formData);
       alert("Profile updated successfully!");
       setEditMode(false);
     } catch (err) {
